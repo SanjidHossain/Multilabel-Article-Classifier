@@ -3,9 +3,11 @@
 A text classification model from data collection, model training, and deployment that can classify News articles. <br/>
 The model can classify 22 different types of News articles <br/>The keys of `models\label_types_encoded.json` shows the News labels
 
+###  Visit the [website Here !!](https://multilab-news-classifier.onrender.com)
+
  ## Data Collection
 
-Data was collected from Website of [Dhaka-Tribune](https://www.dhakatribune.com/) and `31,125` book details were scraped <br/>The data collection completed in 2 steps:
+Data was collected from Website of [Dhaka-Tribune](https://www.dhakatribune.com/) and `31,125` News articles were scraped <br/>The data collection was completed in 2 steps:
 
  - **Step-1:- News URL Scraping:** The URLs of news were scraped with `Scripts\Scrape_URL.pyy` and the URLs are stored along with News titles in `Data\News_urls.csv`
  - **Steo2:- News article Scraping:** Using the URLs, News articles and News Category are scraped with `Scripts\data_scrapper.py` and they are stored in `Data\Dataset.csv`
