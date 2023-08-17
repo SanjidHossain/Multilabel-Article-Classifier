@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <h1>Enter News Article</h1>
+            <form action="/" method="POST">
+                <textarea name="text" id="article-input" placeholder="Enter an article here" required></textarea>
+                <button type="submit" name="submit">Classify</button>
+            </form>
+        </div>
+        <div class="output-box">
+            <h1>Classification Result</h1>
+            {% if is_empty_result %}
+                <p>The given text could not be detected, Please Enter another News article or try again</p>
+            {% else %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Possibility</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                    {% for item in label_list %}
+                        <tr>
+                            <td>{{ item.label }}</td>
+                            <td>{{ item.confidence }}%</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+            <button onclick="clearResults()">Clear</button>
+        </div>
+    <script>
+        function clearResults() {
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
