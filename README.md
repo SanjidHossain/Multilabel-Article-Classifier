@@ -15,7 +15,7 @@ Data was collected from Website of [Dhaka-Tribune](https://www.dhakatribune.com/
 
 ## Data Preprocessing
 
-Initially, there were 18 different Sub-categories and 4 Categories in the dataset. After some analysis, All the categories and sub-categories were merged as multiple-label category. Apart from that, Data was cleaned as URLs were dropped and nulls values were dropped as well and the final data size was `31,125`
+Initially, there were 18 different Sub-categories and 4 Categories in the dataset. After some analysis, All the categories and sub-categories were merged as multiple-label category. Apart from that, Data was cleaned as URLs were dropped and nulls values were dropped as well and the final data size was `31,125` which was initially `31,889`.
 
 ## Model Training
 
