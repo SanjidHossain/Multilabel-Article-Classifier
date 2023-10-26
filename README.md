@@ -1,4 +1,4 @@
-# Multilabel-News-Classifier
+# Multilabel-Article-Classifier
 
 A text classification model from data collection, model training, and deployment that can classify News articles. <br/>
 The model can classify 22 different types of News articles <br/>The keys of `models\label_types_encoded.json` shows the News labels
